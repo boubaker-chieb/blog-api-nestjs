@@ -1,10 +1,12 @@
 import { Injectable } from '@nestjs/common';
+import { CreatePostDto } from '@posts/dtos/create-post.dto';
+import { UpdatePostDto } from '@posts/dtos/update-post.dto';
 import { UsersService } from '@users/providers/users.service';
 
 @Injectable()
 export class PostsService {
   constructor(private readonly usersService: UsersService) {}
-  getPosts(userId: string) {
+  public getPosts(userId: string) {
     const user = this.usersService.findOneById(userId);
     if (!user) {
       throw new Error('user not found');
@@ -22,4 +24,6 @@ export class PostsService {
       },
     ];
   }
+  public createPost(createPostDto: CreatePostDto) {}
+  public updatePost(updatePost: UpdatePostDto) {}
 }

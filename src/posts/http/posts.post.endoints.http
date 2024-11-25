@@ -1,0 +1,17 @@
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "TestTitle",
+    "postType": "post",
+    "slug": "testSlug",
+    "status": "draft",
+    "publishedOn": "2024-01-01",
+    "tags": ["nestjs", "typescript"],
+    "metaOptions": [
+       {
+         "key": "test",
+        "value": 12
+       }
+    ]
+}

@@ -2,6 +2,7 @@
 /dist
 /node_modules
 /build
+/compodoc-output
 
 # Logs
 logs
